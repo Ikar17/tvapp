@@ -62,10 +62,10 @@ class TvApp {
         textWithTags.innerHTML = show.summary;
 
         let card = createElement('div', 'card');
-        let img = createElement('img','card-img-top', null, show.image ? show.image.medium : "");
+        let img = createElement('img','card-img-top', null, show.image ? show.image.medium : "https://placehold.co/210x295");
         let cardBody = createElement('div', 'card-body');
         let h5 = createElement('h5','card-title', show.name);
-        let p = createElement('p', 'card-text', textWithTags.textContent);
+        let p = createElement('p', 'card-text', `${textWithTags.textContent.slice(0,80)}...`);
         let button = createElement('button', 'btn btn-primary', 'Show details');
 
         card.appendChild(img);
